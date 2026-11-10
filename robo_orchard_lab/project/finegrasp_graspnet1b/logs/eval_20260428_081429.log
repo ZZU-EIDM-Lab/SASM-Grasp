@@ -1,0 +1,60 @@
+Rank[0/1] 04/28/2026 08:14:30 INFO train.py:232 | if accelerator initialized:True
+Rank[0/1] 04/28/2026 08:14:30 INFO train.py:233 | accelerator state: {'_cpu': False, 'backend': None, 'device': device(type='cuda'), 'debug': False, 'distributed_type': <DistributedType.NO: 'NO'>, 'num_processes': 1, 'process_index': 0, 'local_process_index': 0, 'fork_launched': False, 'deepspeed_plugins': None, 'torch_tp_plugin': None, 'parallelism_config': None, 'device_mesh': None, 'dynamo_plugin': TorchDynamoPlugin(backend=<DynamoBackend.NO: 'NO'>, mode='default', fullgraph=False, dynamic=None, options=None, disable=False, use_regional_compilation=False), '_mixed_precision': 'no'}
+Rank[0/1] 04/28/2026 08:14:30 INFO train.py:111 | 
+{
+    "lr_scheduler_step_at": "step",
+    "max_step": null,
+    "max_epoch": 20,
+    "step_eval_freq": null,
+    "epoch_eval_freq": 100,
+    "resume_from": "/home/zhangsai/Downloads/Finegrasp/robo_orchard_lab/projects/finegrasp_graspnet1b/workspace0005sm/checkpoints/checkpoint_20",
+    "resume_share_dir": null,
+    "grad_clip_mode": "norm",
+    "grad_clip_value": null,
+    "grad_max_norm": 10.0,
+    "grad_norm_type": 2,
+    "train_split": "train",
+    "test_split": "test",
+    "data_root": "/home/zhangsai/Downloads/EconomicGrasp/dataset/6dofdata",
+    "lr": 0.0005,
+    "train_batch_size": 4,
+    "train_num_workers": 4,
+    "eval_batch_size": 4,
+    "eval_num_workers": 4,
+    "test_mode": [
+        "test_scale"
+    ],
+    "save_epoch_freq": 1,
+    "save_step_freq": null,
+    "step_log_freq": 25,
+    "world_size": 1
+}
+Rank[0/1] 04/28/2026 08:14:34 WARNING rigid_transformations.py:32 | Failed to import ros dependencies in rigid_transforms.py
+Rank[0/1] 04/28/2026 08:14:34 WARNING rigid_transformations.py:40 | autolab_core not installed as catkin package, RigidTransform ros methods will be unavailable
+Rank[0/1] 04/28/2026 08:14:35 INFO hook_based_trainer.py:326 | [RANK 0] Resume from: resume_from='/home/zhangsai/Downloads/Finegrasp/robo_orchard_lab/projects/finegrasp_graspnet1b/workspace0005sm/checkpoints/checkpoint_20' cache_dir='/tmp/resume_from' safe_serialization=True
+Rank[0/1] 04/28/2026 08:14:35 INFO accelerator.py:3784 | [RANK 0] Loading states from /home/zhangsai/Downloads/Finegrasp/robo_orchard_lab/projects/finegrasp_graspnet1b/workspace0005sm/checkpoints/checkpoint_20
+Rank[0/1] 04/28/2026 08:14:35 INFO checkpointing.py:247 | [RANK 0] All model weights loaded successfully
+Rank[0/1] 04/28/2026 08:14:35 INFO checkpointing.py:255 | [RANK 0] All optimizer states loaded successfully
+Rank[0/1] 04/28/2026 08:14:35 INFO checkpointing.py:263 | [RANK 0] All scheduler states loaded successfully
+Rank[0/1] 04/28/2026 08:14:35 INFO checkpointing.py:281 | [RANK 0] All dataloader sampler states loaded successfully
+Rank[0/1] 04/28/2026 08:14:35 INFO checkpointing.py:314 | [RANK 0] All random states loaded successfully
+Rank[0/1] 04/28/2026 08:14:35 INFO accelerator.py:3881 | [RANK 0] Loading in 1 custom states
+Rank[0/1] 04/28/2026 08:14:35 INFO checkpointing.py:337 | [RANK 0] Loading the state of TrainerProgressState from /home/zhangsai/Downloads/Finegrasp/robo_orchard_lab/projects/finegrasp_graspnet1b/workspace0005sm/checkpoints/checkpoint_20/custom_checkpoint_0.pkl
+Rank[0/1] 04/28/2026 08:14:35 INFO trainer.py:197 | 
+==================================================BEGIN EVAL==================================================
+Traceback (most recent call last):
+  File "/home/zhangsai/Downloads/Finegrasp/robo_orchard_lab/projects/finegrasp_graspnet1b/train.py", line 234, in <module>
+    main(args, accelerator)
+  File "/home/zhangsai/Downloads/Finegrasp/robo_orchard_lab/projects/finegrasp_graspnet1b/train.py", line 184, in main
+    trainer.eval()
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_lab/pipeline/trainer.py", line 199, in eval
+    model_outputs = self.model(batch)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_lab/models/finegrasp/finegrasp.py", line 196, in forward
+    point_scale = end_points["point_scale"].to(seed_features.device)  # [B, N]
+KeyError: 'point_scale'

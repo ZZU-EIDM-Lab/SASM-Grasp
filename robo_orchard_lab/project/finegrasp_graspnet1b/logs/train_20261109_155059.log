@@ -1,0 +1,126 @@
+Rank[0/1] 11/09/2026 15:51:00 INFO train.py:288 | if accelerator initialized:True
+Rank[0/1] 11/09/2026 15:51:00 INFO train.py:289 | accelerator state: {'_cpu': False, 'backend': None, 'device': device(type='cuda'), 'debug': False, 'distributed_type': <DistributedType.NO: 'NO'>, 'num_processes': 1, 'process_index': 0, 'local_process_index': 0, 'fork_launched': False, 'deepspeed_plugins': None, 'torch_tp_plugin': None, 'parallelism_config': None, 'device_mesh': None, 'dynamo_plugin': TorchDynamoPlugin(backend=<DynamoBackend.NO: 'NO'>, mode='default', fullgraph=False, dynamic=None, options=None, disable=False, use_regional_compilation=False), '_mixed_precision': 'no'}
+Rank[0/1] 11/09/2026 15:51:00 INFO train.py:120 | 
+{
+    "lr_scheduler_step_at": "step",
+    "max_step": null,
+    "max_epoch": 20,
+    "step_eval_freq": null,
+    "epoch_eval_freq": 100,
+    "resume_from": null,
+    "resume_share_dir": null,
+    "grad_clip_mode": "norm",
+    "grad_clip_value": null,
+    "grad_max_norm": 10.0,
+    "grad_norm_type": 2,
+    "train_split": "train",
+    "test_split": "test",
+    "data_root": "/home/zhangsai/Downloads/EconomicGrasp/dataset/6dofdata",
+    "lr": 0.0005,
+    "train_batch_size": 4,
+    "train_num_workers": 4,
+    "eval_batch_size": 4,
+    "eval_num_workers": 4,
+    "test_mode": [
+        "test"
+    ],
+    "save_epoch_freq": 1,
+    "save_step_freq": null,
+    "step_log_freq": 25,
+    "world_size": 1
+}
+Rank[0/1] 11/09/2026 15:51:03 WARNING rigid_transformations.py:25 | Failed to import geometry msgs in rigid_transformations.py.
+Rank[0/1] 11/09/2026 15:51:03 WARNING rigid_transformations.py:32 | Failed to import ros dependencies in rigid_transforms.py
+Rank[0/1] 11/09/2026 15:51:03 WARNING rigid_transformations.py:40 | autolab_core not installed as catkin package, RigidTransform ros methods will be unavailable
+Rank[0/1] 11/09/2026 15:51:04 INFO hook_based_trainer.py:363 | [RANK 0] 
+==================================================BEGIN TRAINING==================================================
+Rank[0/1] 11/09/2026 15:51:04 INFO hook_based_trainer.py:367 | [RANK 0] Start training loop from epoch 0 and step 0
+Traceback (most recent call last):
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/multiprocessing/queues.py", line 244, in _feed
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/multiprocessing/reduction.py", line 51, in dumps
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/torch/multiprocessing/reductions.py", line 618, in reduce_storage
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/torch/storage.py", line 447, in wrapper
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/torch/storage.py", line 522, in _share_fd_cpu_
+RuntimeError: unable to open shared memory object </torch_3708089_192368374_686> in read-write mode: Too many open files (24)
+Traceback (most recent call last):
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/multiprocessing/resource_sharer.py", line 145, in _serve
+Exception in thread Thread-1 (_pin_memory_loop):
+Traceback (most recent call last):
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    send(conn, destination_pid)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/multiprocessing/resource_sharer.py", line 50, in send
+    reduction.send_handle(conn, new_fd, pid)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/multiprocessing/reduction.py", line 183, in send_handle
+    self.run()
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/threading.py", line 953, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 61, in _pin_memory_loop
+    with socket.fromfd(conn.fileno(), socket.AF_UNIX, socket.SOCK_STREAM) as s:
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/socket.py", line 545, in fromfd
+    do_one_step()
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/torch/utils/data/_utils/pin_memory.py", line 37, in do_one_step
+    r = in_queue.get(timeout=MP_STATUS_CHECK_INTERVAL)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/multiprocessing/queues.py", line 122, in get
+    return _ForkingPickler.loads(res)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/torch/multiprocessing/reductions.py", line 541, in rebuild_storage_fd
+    nfd = dup(fd)
+OSError: [Errno 24] Too many open files
+    fd = df.detach()
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/multiprocessing/resource_sharer.py", line 58, in detach
+    return reduction.recv_handle(conn)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/multiprocessing/reduction.py", line 189, in recv_handle
+    return recvfds(s, 1)[0]
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/multiprocessing/reduction.py", line 159, in recvfds
+    raise EOFError
+EOFError
+Rank[0/1] 11/09/2026 15:51:10 INFO accelerator.py:3632 | [RANK 0] Saving current state to workspacesamplelinear/checkpoints/checkpoint_0
+Rank[0/1] 11/09/2026 15:51:10 INFO torch_model.py:240 | Saving model config to model.config.json.
+Rank[0/1] 11/09/2026 15:51:10 INFO checkpointing.py:115 | [RANK 0] Model weights saved in workspacesamplelinear/checkpoints/checkpoint_0/model.safetensors
+Rank[0/1] 11/09/2026 15:51:10 INFO checkpointing.py:122 | [RANK 0] Optimizer state saved in workspacesamplelinear/checkpoints/checkpoint_0/optimizer.bin
+Rank[0/1] 11/09/2026 15:51:10 INFO checkpointing.py:129 | [RANK 0] Scheduler state saved in workspacesamplelinear/checkpoints/checkpoint_0/scheduler.bin
+Rank[0/1] 11/09/2026 15:51:10 INFO checkpointing.py:146 | [RANK 0] Sampler state for dataloader 0 saved in workspacesamplelinear/checkpoints/checkpoint_0/sampler.bin
+Rank[0/1] 11/09/2026 15:51:10 INFO checkpointing.py:146 | [RANK 0] Sampler state for dataloader 1 saved in workspacesamplelinear/checkpoints/checkpoint_0/sampler_1.bin
+Rank[0/1] 11/09/2026 15:51:10 INFO checkpointing.py:146 | [RANK 0] Sampler state for dataloader 2 saved in workspacesamplelinear/checkpoints/checkpoint_0/sampler_2.bin
+Rank[0/1] 11/09/2026 15:51:10 INFO checkpointing.py:179 | [RANK 0] Random states saved in workspacesamplelinear/checkpoints/checkpoint_0/random_states_0.pkl
+Rank[0/1] 11/09/2026 15:51:10 INFO checkpointing.py:327 | [RANK 0] Saving the state of TrainerProgressState to workspacesamplelinear/checkpoints/checkpoint_0/custom_checkpoint_0.pkl
+Rank[0/1] 11/09/2026 15:51:10 INFO accelerator.py:3533 | [RANK 0] Model weights saved in workspacesamplelinear/checkpoints/checkpoint_0/model/pytorch_model.bin
+Rank[0/1] 11/09/2026 15:51:10 INFO checkpoint.py:272 | Save checkpoint at the end of training to workspacesamplelinear/checkpoints/checkpoint_0
+Traceback (most recent call last):
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_core/utils/hook.py", line 501, in begin
+    yield arg
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_lab/pipeline/hooks/mixin.py", line 163, in begin
+    yield ctx
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_lab/pipeline/hook_based_trainer.py", line 422, in __call__
+    for _i, batch in enumerate(self.dataloader):
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/accelerate/data_loader.py", line 589, in __iter__
+    next_batch = next(dataloader_iter)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 733, in __next__
+    data = self._next_data()
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1491, in _next_data
+    idx, data = self._get_data()
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1448, in _get_data
+    raise RuntimeError("Pin memory thread exited unexpectedly")
+RuntimeError: Pin memory thread exited unexpectedly
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zhangsai/Downloads/Finegrasp/robo_orchard_lab/projects/finegrasp_graspnet1b/train.py", line 290, in <module>
+    main(args, accelerator)
+  File "/home/zhangsai/Downloads/Finegrasp/robo_orchard_lab/projects/finegrasp_graspnet1b/train.py", line 228, in main
+    trainer()
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_lab/pipeline/hook_based_trainer.py", line 419, in __call__
+    with self.hooks.begin(
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_lab/pipeline/hooks/mixin.py", line 162, in begin
+    with self.hooks[channel].begin(arg) as ctx:
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_core/utils/hook.py", line 504, in begin
+    hook.after(arg)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_core/utils/hook.py", line 390, in after
+    self._after(arg)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_lab/pipeline/hooks/stats.py", line 358, in _on_epoch_end
+    avg_step_time = epoch_duration / elapsed_steps
+ZeroDivisionError: float division by zero

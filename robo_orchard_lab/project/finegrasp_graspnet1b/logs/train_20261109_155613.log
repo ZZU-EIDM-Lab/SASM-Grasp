@@ -1,0 +1,39 @@
+Rank[0/1] 11/09/2026 15:56:14 INFO train.py:290 | if accelerator initialized:True
+Rank[0/1] 11/09/2026 15:56:14 INFO train.py:291 | accelerator state: {'_cpu': False, 'backend': None, 'device': device(type='cuda'), 'debug': False, 'distributed_type': <DistributedType.NO: 'NO'>, 'num_processes': 1, 'process_index': 0, 'local_process_index': 0, 'fork_launched': False, 'deepspeed_plugins': None, 'torch_tp_plugin': None, 'parallelism_config': None, 'device_mesh': None, 'dynamo_plugin': TorchDynamoPlugin(backend=<DynamoBackend.NO: 'NO'>, mode='default', fullgraph=False, dynamic=None, options=None, disable=False, use_regional_compilation=False), '_mixed_precision': 'no'}
+Rank[0/1] 11/09/2026 15:56:14 INFO train.py:122 | 
+{
+    "lr_scheduler_step_at": "step",
+    "max_step": null,
+    "max_epoch": 20,
+    "step_eval_freq": null,
+    "epoch_eval_freq": 100,
+    "resume_from": null,
+    "resume_share_dir": null,
+    "grad_clip_mode": "norm",
+    "grad_clip_value": null,
+    "grad_max_norm": 10.0,
+    "grad_norm_type": 2,
+    "train_split": "train",
+    "test_split": "test",
+    "data_root": "/home/zhangsai/Downloads/EconomicGrasp/dataset/6dofdata",
+    "lr": 0.0005,
+    "train_batch_size": 4,
+    "train_num_workers": 4,
+    "eval_batch_size": 4,
+    "eval_num_workers": 4,
+    "test_mode": [
+        "test"
+    ],
+    "save_epoch_freq": 1,
+    "save_step_freq": null,
+    "step_log_freq": 25,
+    "world_size": 1
+}
+Rank[0/1] 11/09/2026 15:56:18 WARNING rigid_transformations.py:25 | Failed to import geometry msgs in rigid_transformations.py.
+Rank[0/1] 11/09/2026 15:56:18 WARNING rigid_transformations.py:32 | Failed to import ros dependencies in rigid_transforms.py
+Rank[0/1] 11/09/2026 15:56:18 WARNING rigid_transformations.py:40 | autolab_core not installed as catkin package, RigidTransform ros methods will be unavailable
+Rank[0/1] 11/09/2026 15:56:19 INFO hook_based_trainer.py:363 | [RANK 0] 
+==================================================BEGIN TRAINING==================================================
+Rank[0/1] 11/09/2026 15:56:19 INFO hook_based_trainer.py:367 | [RANK 0] Start training loop from epoch 0 and step 0
+Rank[0/1] 11/09/2026 15:56:42 INFO stats.py:319 | Epoch[0] Step[24] GlobalStep[24] Training Speed: 4.25 samples/sec across all devices.	Average Step Time: 0.94 sec.	Estimated Remaining Time: 1 day, 9:26:44.	Learning Rate Group 0: 1.95811e-06.	
+Rank[0/1] 11/09/2026 15:56:42 INFO loss_tracker.py:141 | Epoch[0/19] Step[24] GlobalStep[24/127999]: objectness_loss[0.6853]	graspness_loss[2.4569]	view_loss[6.5243]	angle_loss[2.5377]	depth_loss[2.8974]	score_loss[1.7751]	width_loss[1.6101]	scale_aux_loss[0.0054]	total_loss[18.4921]

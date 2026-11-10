@@ -1,0 +1,125 @@
+Rank[0/1] 11/09/2026 14:59:55 INFO train.py:288 | if accelerator initialized:True
+Rank[0/1] 11/09/2026 14:59:55 INFO train.py:289 | accelerator state: {'_cpu': False, 'backend': None, 'device': device(type='cuda'), 'debug': False, 'distributed_type': <DistributedType.NO: 'NO'>, 'num_processes': 1, 'process_index': 0, 'local_process_index': 0, 'fork_launched': False, 'deepspeed_plugins': None, 'torch_tp_plugin': None, 'parallelism_config': None, 'device_mesh': None, 'dynamo_plugin': TorchDynamoPlugin(backend=<DynamoBackend.NO: 'NO'>, mode='default', fullgraph=False, dynamic=None, options=None, disable=False, use_regional_compilation=False), '_mixed_precision': 'no'}
+Rank[0/1] 11/09/2026 14:59:55 INFO train.py:120 | 
+{
+    "lr_scheduler_step_at": "step",
+    "max_step": null,
+    "max_epoch": 20,
+    "step_eval_freq": null,
+    "epoch_eval_freq": 100,
+    "resume_from": "/home/zhangsai/Downloads/Finegrasp/robo_orchard_lab/projects/finegrasp_graspnet1b/workspace0005sllmone-film2kinect/checkpoints/checkpoint_16",
+    "resume_share_dir": null,
+    "grad_clip_mode": "norm",
+    "grad_clip_value": null,
+    "grad_max_norm": 10.0,
+    "grad_norm_type": 2,
+    "train_split": "train",
+    "test_split": "test",
+    "data_root": "/home/zhangsai/Downloads/EconomicGrasp/dataset/6dofdata",
+    "lr": 0.0005,
+    "train_batch_size": 4,
+    "train_num_workers": 4,
+    "eval_batch_size": 4,
+    "eval_num_workers": 4,
+    "test_mode": [
+        "test"
+    ],
+    "save_epoch_freq": 1,
+    "save_step_freq": null,
+    "step_log_freq": 25,
+    "world_size": 1
+}
+Rank[0/1] 11/09/2026 14:59:59 WARNING rigid_transformations.py:25 | Failed to import geometry msgs in rigid_transformations.py.
+Rank[0/1] 11/09/2026 14:59:59 WARNING rigid_transformations.py:32 | Failed to import ros dependencies in rigid_transforms.py
+Rank[0/1] 11/09/2026 14:59:59 WARNING rigid_transformations.py:40 | autolab_core not installed as catkin package, RigidTransform ros methods will be unavailable
+Rank[0/1] 11/09/2026 15:00:00 INFO hook_based_trainer.py:326 | [RANK 0] Resume from: resume_from='/home/zhangsai/Downloads/Finegrasp/robo_orchard_lab/projects/finegrasp_graspnet1b/workspace0005sllmone-film2kinect/checkpoints/checkpoint_16' cache_dir='/tmp/resume_from' safe_serialization=True
+Rank[0/1] 11/09/2026 15:00:00 INFO accelerator.py:3784 | [RANK 0] Loading states from /home/zhangsai/Downloads/Finegrasp/robo_orchard_lab/projects/finegrasp_graspnet1b/workspace0005sllmone-film2kinect/checkpoints/checkpoint_16
+Rank[0/1] 11/09/2026 15:00:00 INFO checkpointing.py:247 | [RANK 0] All model weights loaded successfully
+Rank[0/1] 11/09/2026 15:00:00 INFO checkpointing.py:255 | [RANK 0] All optimizer states loaded successfully
+Rank[0/1] 11/09/2026 15:00:00 INFO checkpointing.py:263 | [RANK 0] All scheduler states loaded successfully
+Rank[0/1] 11/09/2026 15:00:00 INFO checkpointing.py:281 | [RANK 0] All dataloader sampler states loaded successfully
+Rank[0/1] 11/09/2026 15:00:00 INFO checkpointing.py:314 | [RANK 0] All random states loaded successfully
+Rank[0/1] 11/09/2026 15:00:00 INFO accelerator.py:3881 | [RANK 0] Loading in 1 custom states
+Rank[0/1] 11/09/2026 15:00:00 INFO checkpointing.py:337 | [RANK 0] Loading the state of TrainerProgressState from /home/zhangsai/Downloads/Finegrasp/robo_orchard_lab/projects/finegrasp_graspnet1b/workspace0005sllmone-film2kinect/checkpoints/checkpoint_16/custom_checkpoint_0.pkl
+Rank[0/1] 11/09/2026 15:00:00 INFO hook_based_trainer.py:363 | [RANK 0] 
+==================================================BEGIN TRAINING==================================================
+Rank[0/1] 11/09/2026 15:00:00 INFO hook_based_trainer.py:367 | [RANK 0] Start training loop from epoch 16 and step 6400
+Traceback (most recent call last):
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_core/utils/hook.py", line 501, in begin
+    yield arg
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_lab/pipeline/hooks/mixin.py", line 163, in begin
+    yield ctx
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_lab/pipeline/hook_based_trainer.py", line 422, in __call__
+    for _i, batch in enumerate(self.dataloader):
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/accelerate/data_loader.py", line 577, in __iter__
+    current_batch = next(dataloader_iter)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 733, in __next__
+    data = self._next_data()
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1515, in _next_data
+    return self._process_data(data, worker_id)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1550, in _process_data
+    data.reraise()
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/torch/_utils.py", line 750, in reraise
+    raise exception
+RuntimeError: Caught RuntimeError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 349, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_lab/dataset/collates.py", line 46, in collate_batch_dict
+    output[key] = stack_batch([torch.from_numpy(x) for x in elements])
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_lab/utils/misc.py", line 163, in stack_batch
+    return torch.stack(tensor_list)
+RuntimeError: stack expects each tensor to be equal size, but got [344973, 3] at entry 0 and [441818, 3] at entry 1
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_core/utils/hook.py", line 501, in begin
+    yield arg
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_lab/pipeline/hooks/mixin.py", line 163, in begin
+    yield ctx
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_lab/pipeline/hook_based_trainer.py", line 419, in __call__
+    with self.hooks.begin(
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_lab/pipeline/hooks/mixin.py", line 162, in begin
+    with self.hooks[channel].begin(arg) as ctx:
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_core/utils/hook.py", line 504, in begin
+    hook.after(arg)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_core/utils/hook.py", line 390, in after
+    self._after(arg)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_lab/pipeline/hooks/stats.py", line 358, in _on_epoch_end
+    avg_step_time = epoch_duration / elapsed_steps
+ZeroDivisionError: float division by zero
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zhangsai/Downloads/Finegrasp/robo_orchard_lab/projects/finegrasp_graspnet1b/train.py", line 290, in <module>
+    main(args, accelerator)
+  File "/home/zhangsai/Downloads/Finegrasp/robo_orchard_lab/projects/finegrasp_graspnet1b/train.py", line 228, in main
+    trainer()
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_lab/pipeline/hook_based_trainer.py", line 403, in __call__
+    with self.hooks.begin(
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_lab/pipeline/hooks/mixin.py", line 162, in begin
+    with self.hooks[channel].begin(arg) as ctx:
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_core/utils/hook.py", line 504, in begin
+    hook.after(arg)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_core/utils/hook.py", line 390, in after
+    self._after(arg)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_lab/pipeline/hooks/checkpoint.py", line 270, in _on_loop_end
+    save_location = self._save_state(args.accelerator)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/robo_orchard_lab/pipeline/hooks/checkpoint.py", line 189, in _save_state
+    save_location = accelerator.save_state(save_path)
+  File "/home/zhangsai/anaconda3/envs/finegrasp/lib/python3.10/site-packages/accelerate/accelerator.py", line 3627, in save_state
+    raise ValueError(
+ValueError: Checkpoint directory workspacesamplelinear/checkpoints/checkpoint_0 (0) already exists. Please manually override `self.save_iteration` with what iteration to start with.

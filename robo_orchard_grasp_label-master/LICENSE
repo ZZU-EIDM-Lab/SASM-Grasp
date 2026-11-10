@@ -1,0 +1,139 @@
+Copyright (c) 2025 Horizon Robotics and RoboOrchard Contributors. All rights reserved.
+
+                  Non-Commercial Open Source License
+
+                           Version 1.0
+
+The development of this Software incorporates components governed by
+third-party upstream software licenses. To ensure the continuity of licensing
+restrictions imposed by such upstream software and to maintain consistency
+within the open source ecosystem of this Software, the Contributor hereby
+grants this Non-Commercial Open Source License to regulate the use,
+modification, and distribution of the Software.
+
+1. Definitions
+   1.1.  "License" Means the rights to use, copy, distribute, and modify the
+Software.
+   1.2.  "You" Means an individual or entity exercising permissions granted
+under this License.
+   1.3.  "Contributor" Means the entity or individual that retains full
+ownership of all intellectual property rights (including, without limitation,
+copyrights, patents, and all related derivative rights) in this Software.
+   1.4.  "the Software" Means all source code, object code, documentation, and
+related materials provided by Contributor and governed by this License.
+   1.5.  "Derivative Works" Means any work created through modification,
+combination, translation, or other forms of adaptation of the Software,
+including without limitation: works formed by direct modification of the
+Software's source code; works created by integrating the Software as a
+component into other software; and works generated through reverse engineering,
+compilation, or decompilation of the Software.
+   1.6.  "Upstream Software" Means specific third-party software components
+with independent licenses that Contributor relies upon during the Software's
+development.
+   1.7.  "Upstream Software License" Means the legally binding authorization
+instrument issued by the rights holder of the Upstream Software that delineates
+the scope of rights, obligations, and restrictions applicable to any individual
+or entity pertaining to the use, modification, or distribution of the Upstream
+Software.
+   1.8.  "Non-Commercial Purpose" Means any activity not directed toward
+obtaining commercial advantage or monetary compensation,whether directly or
+indirectly, including, without limitation:Personal learning;Public-benefit
+projects of non-profit organizations;Academic research; or Educational
+use."Commercial Advantage" means economic benefits or business gains obtained
+directly or indirectly, including, but not limited to:Sale of software or
+services;Advertising revenue;Paid subscriptions;Fee-based services; and Any
+other activities directed toward commercial gain.
+
+2. Copyright License
+   2.1.  Contributor grants You a worldwide, royalty-free, non-exclusive
+copyright license to use, copy, and distribute the Software for Non-Commercial
+Purposes.
+   2.2.  Any Derivative Works arising from the Software shall be used
+exclusively for Non-Commercial Purposes. If You intend to use such Derivative
+Works commercially, You must obtain the Contributor's prior written commercial
+license.
+   2.3.  For Upstream Software incorporated in the Software, You must comply
+with the Upstream Software License. If You commercially exploit the Software in
+combination with Upstream Software, You must secure a separate written license
+from the rights holder of the Upstream Software.
+
+3. Patent License
+   3.1.  Contributor hereby grants you a worldwide, royalty-free, non-exclusive
+license to reproduce, use and distribute the Software for non-commercial
+purposes, subject to the terms of this License, in respect of the proprietary
+rights owned by Contributor which are necessary for the implementation of the
+technical solutions of the Software.
+   3.2.  The patent license extends solely to patents owned or licensable by
+Contributor, excluding all patent rights in Upstream Software. Commercial
+exploitation of patented subject matter requires separate written agreement
+with Contributor.
+
+4. Upstream Software Dependency
+   4.1.  Dependency List: This Software relies on [Name of Upstream Software
+Dependency]:[License Name and Version] as detailed in Appendix.
+   4.2.  When You use or distribute the Software or its Derivative Works, You
+must: include complete copies of all licenses of the dependent Upstream
+Software; clearly state the dependency relationships and the licensing terms of
+each Upstream Software in the NOTICE file; and ensure that Your use of the
+Upstream Software does not violate any terms of the Upstream Software Licenses.
+
+5. Trademarks & Logos
+   5.1.  Trademark Restrictions: This License does not grant you any rights to
+use Contributor's trademarks, service marks or product names except as
+necessary to comply with the stated obligations of this License.
+   5.2.  Commercial Promotion Prohibition: Use of the Software's name,
+trademarks, or logos for any commercial promotion is expressly prohibited.
+
+6. Disclaimer
+   THE SOFTWARE IS PROVIDED "AS IS" AND CONTRIBUTOR MAKES NO REPRESENTATIONS OR
+WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+WARRANTIES OF:MERCHANTABILITY; FITNESS FOR A PARTICULAR PURPOSE; COMPATIBILITY;
+ACCURACY; COMPLETENESS; RELIABILITY; PERFORMANCE; NON-INFRINGEMENT; WARRANTY OF
+ABSENCE OF DEFECTS; FURTHERMORE, CONTRIBUTOR DISCLAIMS ALL LIABILITY FOR ANY
+KNOWN OR UNKNOWN ERRORS OR DEFECTS. IN NO EVENT SHALL CONTRIBUTOR BE LIABLE TO
+YOU FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE
+DAMAGES ARISING FROM OR RELATED TO THE USE OF THE SOFTWARE (INCLUDING UPSTREAM
+SOFTWARE), WHETHER BASED ON WARRANTY, CONTRACT, TORT (INCLUDING NEGLIGENCE),
+STRICT LIABILITY, OR ANY OTHER LEGAL THEORY, EVEN IF ADVISED OF THE POSSIBILITY
+OF SUCH DAMAGES.
+
+7. Termination
+   7.1.  This License automatically terminates if You materially breach any
+provision, initiate or  participate in legal proceedings against Contributor
+based on the Software. Upon termination, You must immediately cease all use.
+   7.2.  Confidentiality obligations survive termination.
+   7.3.  Termination does not affect liability for damages arising prior to
+termination.
+
+8. Governing Law & Dispute Resolution
+   This License shall be governed by and construed in accordance with the laws
+of the People's Republic of China (PRC), excluding its conflict of law rules
+and the application of the United Nations Convention on Contracts for the
+International Sale of Goods (CISG). The parties hereto irrevocably agree that
+any dispute arising from or relating to this License shall first be resolved
+through amicable negotiations. Should such negotiations fail within sixty (60)
+days, either party may submit the dispute to the Beijing Arbitration Commission
+("BAC") for final and binding arbitration administered in accordance with BAC's
+then-current arbitration rules. The seat of arbitration shall be Beijing, and
+the arbitral award shall be final and binding upon both parties.
+
+9. Miscellaneous
+   9.1.  This License constitutes the entire agreement between Contributor and
+You concerning the Software, and supersedes all prior oral or written
+understandings.
+   9.2.  The terms of this License are standardized and non-modifiable without
+mutual written consent. Any modification requires a separate written agreement
+between the parties, provided that such agreement shall not affect the
+enforceability of this License against other users. Should any provision hereof
+be held invalid or unenforceable by competent authority, that provision shall
+be severed, and the remaining provisions shall retain full force and effect.
+   9.3.  If any provision of this License is held invalid or unenforceable by a
+court or competent regulatory authority, such provision shall be severed
+automatically, and the remaining provisions shall continue in full force and
+effect.
+   9.4.  This License is executed in Chinese and English, both texts being
+equally authentic.In case of material divergence in legal effect between the
+texts, the Chinese version shall prevail.
+
+10. Copyright Notice
+   Copyright © [2024 - 2025] [Horizon Robotics and RoboOrchard Contributors]. All Rights Reserved.
