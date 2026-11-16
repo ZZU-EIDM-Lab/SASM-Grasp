@@ -6,7 +6,7 @@ Training and evaluation scripts for SASM-grasp on the GraspNet-1B dataset.
 
 ## Prepare Conda Env
 
-```bash
+
 conda create -n finegrasp python=3.10.12
 conda activate finegrasp
 
@@ -27,7 +27,7 @@ pip3 install .[finegrasp]
 
 
 ## Install MinkowskiEngine and graspNetAPI
-```bash
+
 git clone https://github.com/graspnet/graspnetAPI.git && cd graspnetAPI
 export SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True
 pip3 install .
@@ -36,27 +36,27 @@ pip3 install transforms3d==0.4.2 numpy==1.26.4
 git clone https://github.com/NVIDIA/MinkowskiEngine.git && cd MinkowskiEngine
 conda install openblas-devel -c anaconda
 python3 setup.py install --blas_include_dirs=${CONDA_PREFIX}/include --blas=openblas
-```
+
 
 ## Install pointnet2 and knn op
 
 Compile and install pointnet2 and knn operators from [Scale-Balanced-Grasp](https://github.com/mahaoxiang822/Scale-Balanced-Grasp/tree/main)
 
-```
+
 git clone https://github.com/mahaoxiang822/Scale-Balanced-Grasp
 
 cd Scale-Balanced-Grasp/pointnet2 && python3 setup.py install && cd ../..
 
 cd Scale-Balanced-Grasp/knn && python3 setup.py install
 
-```
+
 ## Prepare Dataset
 
 For dataset basic preparation, please follow the instructions provided in [EconomicGrasp](https://github.com/iSEE-Laboratory/EconomicGrasp).
 
 
 ## check Envrionment
-```bash
+
 cd projects/finegrasp_graspnet1b
 CUDA_VISIBLE_DEVICES=0 python3 train.py \
     --config configs/config_finegrasp_minkunet.py \
@@ -64,20 +64,19 @@ CUDA_VISIBLE_DEVICES=0 python3 train.py \
     --data_root ./data \
     --kwargs '{"train_split":"mini", "test_split":"mini", "test_mode":["test_scale_mini"], "step_log_freq":10, "max_epoch":1, "lr":0.0}'
 
-```
+
 ## Single GPU Training
 
-```bash
+
 cd projects/finegrasp_graspnet1b
 CUDA_VISIBLE_DEVICES=0 python3 train.py \
     --config configs/config_finegrasp_minkunet.py \
     --workspace_root ./workspace \
     --data_root ./data
-```
+
 
 ## Multi GPU Training
 
-```bash
 cd projects/finegrasp_graspnet1b
 accelerate launch \
     --multi-gpu \
@@ -87,24 +86,37 @@ accelerate launch \
     --config configs/config_finegrasp_minkunet.py \
     --workspace_root ./workspace \
     --data_root ./data
-```
 
 
 ## Eval
-```bash
+
 cd projects/finegrasp_graspnet1b
 python3 eval.py \
     --config configs/config_finegrasp_minkunet.py \
     --workspace_root ./workspace/eval_results
     --data_root ./data
-```
+
+<h3>Real-World Grasping Experiments</h3>
+<p align="center">
+  <img src="assets/gifs/grasp_1.gif" width="48%">
+  <img src="assets/gifs/grasp_2.gif" width="48%">
+</p>
+
+<p align="center">
+  <img src="assets/gifs/grasp_3.gif" width="48%">
+  <img src="assets/gifs/grasp_4.gif" width="48%">
+</p>
+
+<p align="center">
+  <img src="assets/gifs/grasp_5.gif" width="48%">
+</p>
+
 
 ## Quick inference using pipeline and pretrain models
 
-```bash
 cd projects/finegrasp_graspnet1b
 python3 infer.py
-```
+
 
 
 We thank the following repositories for their valuable contributions:
